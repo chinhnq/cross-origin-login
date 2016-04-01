@@ -1,0 +1,15 @@
+{
+  "name": "cross-origin-login",
+  "version": "0.0.0",
+  "authors": [
+    "Chinh Nguyen"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
