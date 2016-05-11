@@ -19,7 +19,7 @@ $(document).ready(function() {
     //Request login token
     $.getJSON(quoineHost + "/cors_auth", function(response) {
       //Use token to login to trading dashboard
-      window.location = jbitsHost + "/app/#/app/direct-auth?token="+response.encrypted
+      window.location = jbitsHost + "/#/auth?token=" + response.encrypted
     });
   });
 });
