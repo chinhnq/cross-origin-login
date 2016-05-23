@@ -5,9 +5,9 @@ $(document).ready(function() {
   var userId = "7605",
       secret = "/1HwnL1u/DzodLIXmDXYvBtmB7inr/xqKg+F8J8QKVQR7J9pVOg0boH9Lm9eFHyy9h8rfQI7h6W3vdOcL7TWrQ==";
 
+  jbitsHost = prompt("Please enter url", jbitsHost);
   userId = prompt("Please enter your name", userId);
   secret = prompt("Please enter your secret", secret);
-  jbitsHost = prompt("Please enter your secret", jbitsHost);
 
   //Sign the request for Authentication
   $.ajaxSetup({
