@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var button = $('#login');
-  var quoineHost = "https://staging1.quoine.com",
-      jbitsHost = "https://trade-stg.jbits.jp";
+  var quoineHost = "https://www.quoine.com",
+      jbitsHost = "https://trade.jbits.jp";
   var userId = "7605",
       secret = "/1HwnL1u/DzodLIXmDXYvBtmB7inr/xqKg+F8J8QKVQR7J9pVOg0boH9Lm9eFHyy9h8rfQI7h6W3vdOcL7TWrQ==";
 
