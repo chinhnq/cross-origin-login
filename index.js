@@ -2,17 +2,17 @@ $(document).ready(function() {
   var button = $('#login');
   var quoineHost = "https://www.quoine.com",
       jbitsHost = "https://trade.jbits.jp";
-  var userId = "7605",
+  var tokenId = "7605",
       secret = "/1HwnL1u/DzodLIXmDXYvBtmB7inr/xqKg+F8J8QKVQR7J9pVOg0boH9Lm9eFHyy9h8rfQI7h6W3vdOcL7TWrQ==";
 
   jbitsHost = prompt("Please enter url", jbitsHost);
-  userId = prompt("Please enter your name", userId);
+  tokenId = prompt("Please enter your name", tokenId);
   secret = prompt("Please enter your secret", secret);
 
   //Sign the request for Authentication
   $.ajaxSetup({
     beforeSend: function(xhr) {
-      xhr.setRequestHeader('X-Quoine-Auth', sign(getAuthPayload(userId), secret));
+      xhr.setRequestHeader('X-Quoine-Auth', sign(getAuthPayload(tokenId), secret));
     }
   });
   //end
@@ -35,9 +35,9 @@ function sign(payload, secret){
   return KJUR.jws.JWS.sign("HS256", sHeader, sPayload, secret);
 }
 
-function getAuthPayload(userId){
+function getAuthPayload(tokenId){
   return {
-    user_id: userId,
+    token_id: tokenId,
     path: "/cors_auth",
     nonce: new Date().getTime()
   }
